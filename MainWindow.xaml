@@ -1,0 +1,109 @@
+﻿<Window x:Class="TestWork.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestWork"
+        mc:Ignorable="d"
+        Title="TestApp" Height="450" Width="800">
+        <Grid Background="#eeeeee">
+                <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" Orientation="Vertical" VerticalAlignment="Center">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="ButtonRGB" 
+                        Content="RGB"
+                        Padding="10"
+                        Margin="20"
+                        Width="80"
+                        Background="#eeeeee"
+                        TabIndex="1"
+                        Click="ButtonRGB_OnClick"></Button>
+                <Button x:Name="ButtonCMYK"
+                        Content="CMYK"
+                        Padding="10"
+                        Margin="20"
+                        Width="80"
+                        Background="#eeeeee"
+                        TabIndex="2"
+                        Click="ButtonCMYK_OnClick"></Button>
+            </StackPanel>
+                <StackPanel x:Name="StackPanelRGB" Visibility="Collapsed" Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Content="Красный"
+                        Padding="10"
+                        Margin="10"
+                        Width="100px"
+                        VerticalAlignment="Center"
+                        TabIndex="4"
+                        Click="ButtonRed_OnClick">
+                </Button>
+                <Button Content="Зелёный"
+                        Padding="10"
+                        Margin="10"
+                        Width="100px"
+                        VerticalAlignment="Center"
+                        TabIndex="5"
+                        Click="ButtonGreen_OnClick">
+                </Button>
+                <Button Content="Синий"
+                        Padding="10"
+                        Margin="10"
+                        Width="100px"
+                        VerticalAlignment="Center"
+                        TabIndex="6"
+                        Click="ButtonBlue_OnClick">
+                </Button>
+            </StackPanel>
+            <StackPanel x:Name="StackPanelCMYK" Visibility="Collapsed" Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Content="Циановый"
+                        Padding="10"
+                        Margin="10"
+                        Width="80px"
+                        VerticalAlignment="Center"
+                        TabIndex="4"
+                        Click="ButtonCyan_OnClick">
+                </Button>
+                <Button Content="Маджента"
+                        Padding="10"
+                        Margin="10"
+                        Width="80px"
+                        VerticalAlignment="Center"
+                        TabIndex="5"
+                        Click="ButtonMagenta_OnClick">
+                </Button>
+                <Button Content="Жёлтый"
+                        Padding="10"
+                        Margin="10"
+                        Width="80px"
+                        VerticalAlignment="Center"
+                        TabIndex="6"
+                        Click="ButtonYellow_OnClick">
+                </Button>
+                <Button Content="Чёрный"
+                        Padding="10"
+                        Margin="10"
+                        Width="80px"
+                        VerticalAlignment="Center"
+                        TabIndex="7"
+                        Click="ButtonKey_OnClick">
+                </Button>
+            </StackPanel>
+            <Button Content="Обновить область"
+                    Padding="10"
+                    Margin=" 30 50 30 30"
+                    VerticalAlignment="Center"
+                    Background="#eeeeee"
+                    TabIndex="3"
+                    Click="ButtonReset_OnClick">
+            </Button>
+        </StackPanel>
+        <TextBox x:Name="Screen"
+                 Grid.Column="1"
+                 Margin="20"
+                 Background="white"
+                 IsReadOnly="True">
+        </TextBox>
+    </Grid>
+</Window>
